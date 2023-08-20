@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://render217.github.io/Interior_consultant/">
+    <a href="https://render217.github.io/Interior_consultant/" target="_blank" >
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/sAiHkhbQR6tRUsI7r7cP" target="_blank" >
       Solution
     </a>
     <span> | </span>
