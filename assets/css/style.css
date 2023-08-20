@@ -1,0 +1,305 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lora:regular,500,600,700,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Pro:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+:root{
+    --ff-poppins:'Poppins','sans-serif';
+    --ff-lora:'Lora','sans-serif';
+    --ff-montserrat:'Montserrat','sans-serif';
+    --ff-crimson-pro:' Crimson Pro','sans-serif';
+
+    --clr-bg-main:#181719;
+    --clr-white:#FFF;
+    --clr-light-gray:rgba(130, 130, 130, 1);
+
+    --fs-1:3rem;
+    --fs-2i:2.5rem;
+    --fs-2ii:2.25rem;
+    --fs-2:1.5rem;
+    --fs-3:1.125rem;
+    --fs-4:0.875rem;
+    --fs-5:0,75rem;
+
+    --fw-700:700;
+    --fw-500:500;
+    --fw-300:300;
+    --fw-200:200;
+    
+}
+
+/* 
+----------------
+    RESET
+----------------
+*/
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-family: var(--ff-montserrat);
+}
+body{
+    background-color: var(--clr-bg-main);
+    color:var(--clr-white);
+}
+img{
+    width:100%;
+    object-fit: cover;
+}
+li{list-style-type: none;}
+/* a,button{
+    display: block;
+} */
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+/* 
+----------------
+    RESUSED
+----------------
+*/
+.container{ padding-inline: 24px;}
+
+
+/* 
+----------------
+    HEADER
+----------------
+*/
+
+.header{
+    padding-block:10px;
+}
+.header .container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo h1{
+   font-size:var(--fs-3);
+   border:1px solid var(--clr-white);
+   padding:4px;
+}
+.nav-open{
+    font-size:var(--fs-2);
+    cursor: pointer;
+}
+.nav-close{
+    font-size:var(--fs-2i);
+    text-align: end;
+    cursor: pointer;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:-300px;
+    bottom:0;
+    width:0;
+    background-color: black;
+    z-index:99;
+    transition: all 300ms ease;
+}
+.navbar.active{
+    transform: translateX(300px);
+    width:100vw;
+}
+.navbar-header{
+ padding:20px 40px;
+ margin-bottom:80px;
+}
+.navbar-list{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    max-width: 500px;
+    margin-inline:auto;
+    padding:20px;
+    text-align:center;
+
+}
+.navbar-link{
+    padding-block:10px;
+    font-size:var(--fs-2);
+    transition: border 300ms ease-in-out;
+}
+.navbar-link:hover{
+    border-bottom:4px solid white;
+}
+
+
+
+
+
+
+
+
+
+/* 
+----------------
+    MAIN
+----------------
+*/
+article{
+    display:grid;
+    grid-template-rows: 1fr minmax(max-content) 1fr;
+}
+section{
+    padding-block:70px;
+}
+.hero{
+    display:flex;
+    flex-direction: column;
+    gap:32px;
+}
+.hero-content{
+    max-width: 350px;
+}
+.hero-title{
+    font-size:var(--fs-2i);
+    font-family:var(--ff-lora);
+   
+}
+.hero-description{
+    font-size:var(--fs-3);
+    line-height:28px;
+    margin-block:20px;
+    margin-bottom:25px;
+}
+.hero-btn{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.hero-img{
+    max-width:600px;
+    position:relative;
+}
+
+.card{
+    background-color: black;
+    padding-block:15px;
+    padding-inline:24px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    width:100%;
+}
+
+.card-img-holder{
+    width:50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.card-top{
+    display:flex;
+    align-items: center;
+    gap:20px;
+}
+.card-info .name{
+    font-size:12px;
+}
+.card-info .job{
+    font-size:11px;
+    color:var(--clr-light-gray);
+}
+
+.card-text{
+    font-size:14px;
+    font-family: var(--ff-lora);
+}
+
+
+/* 
+----------------
+    FOOTER
+----------------
+*/
+footer{
+    padding-block:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+footer > p {
+    font-size:var(--fs-5);
+    color:var(--clr-light-gray)
+}
+
+
+
+
+
+/* 
+----------------
+    MEDIA QUERY
+----------------
+*/
+@media(min-width:500px){
+    .card{
+    position:absolute;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -70px;
+    background-color: black;
+    padding:26px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:350px;
+    
+}
+    .card-info .name{
+        font-size:var(--fs-4);
+    }
+    .card-info .job{
+        font-size:var(--fs-5);
+        color:var(--clr-light-gray);
+    }
+    
+    .card-text{
+        font-size:var(--fs-3);
+        font-family: var(--ff-lora);
+        max-width:200px;
+    }
+}
+@media (min-width:700px){
+    .container{
+        max-width:1100px;
+        margin-inline:auto;
+    }
+    .navbar,.navbar.active{
+        all:unset;
+    }
+    .navbar > *:not(.navbar-list),
+    .nav-open{
+        display: none;
+    }
+    .navbar-list{
+        padding-inline:unset;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar-link{
+        font-size:var(--fs-3)
+    }
+}
+@media(min-width:800px){
+    .hero{
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card{
+        left:60%;
+    }
+}
